@@ -1,13 +1,17 @@
 package prototype;
 
-import prototype.example.ConcreteProduct;
+import prototype.framework.Product;
 
-public class UnderlinePen extends ConcreteProduct {
+public class UnderlinePen implements Product {
 
     private char ulChar;
 
     public UnderlinePen(char ulChar) {
         this.ulChar = ulChar;
+    }
+
+    public UnderlinePen(UnderlinePen protoType) {
+        this.ulChar = protoType.ulChar;
     }
 
     @Override
@@ -18,6 +22,11 @@ public class UnderlinePen extends ConcreteProduct {
             System.out.print(ulChar);
         }
         System.out.println();
+    }
+
+    @Override
+    public Product createCopy() {
+        return new UnderlinePen(this);
     }
 
 }
