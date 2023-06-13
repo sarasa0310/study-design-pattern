@@ -1,12 +1,12 @@
 package builder;
 
-public class TextBuilder extends Builder {
+public class TextBuilder implements Builder {
 
     private StringBuilder sb = new StringBuilder();
 
     @Override
     public void makeTitle(String title) {
-        sb.append("=".repeat(30).concat("\n"));
+        sb.append("=".repeat(20).concat("\n"));
         sb.append("[");
         sb.append(title);
         sb.append("]\n\n");
@@ -14,7 +14,7 @@ public class TextBuilder extends Builder {
 
     @Override
     public void makeString(String str) {
-        sb.append("#");
+        sb.append("# ");
         sb.append(str);
         sb.append("\n\n");
     }
@@ -22,7 +22,7 @@ public class TextBuilder extends Builder {
     @Override
     public void makeItems(String[] items) {
         for (String s : items) {
-            sb.append("*");
+            sb.append("* ");
             sb.append(s);
             sb.append("\n");
         }
@@ -31,7 +31,7 @@ public class TextBuilder extends Builder {
 
     @Override
     public void close() {
-        sb.append("=".repeat(30).concat("\n"));
+        sb.append("=".repeat(20).concat("\n"));
     }
 
     public String getTextResult() {

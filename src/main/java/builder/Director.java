@@ -9,15 +9,15 @@ public class Director {
     }
 
     public void construct() {
-        builder.makeTitle("Greeting");
-        builder.makeString("일반적인 인사");
+        builder.makeTitle("취업 일기");
+
+        builder.makeString("취업 성공을 위해서 필요한 것");
         builder.makeItems(new String[]{
-                "hello", "how are you?", "I'm fine, thank you."
+                "프로필 업그레이드",
+                "꾸준한 지원 및 피드백 수용",
+                "끊임없는 개발 공부"
         });
-        builder.makeString("시간대별 인사");
-        builder.makeItems(new String[]{
-                "good morning", "good afternoon", "good evening"
-        });
+
         builder.close();
     }
 
