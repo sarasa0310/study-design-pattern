@@ -2,9 +2,10 @@ package bridge;
 
 import bridge.function.CountDisplay;
 import bridge.function.Display;
+import bridge.function.IncreaseDisplay;
 import bridge.function.RandomCountDisplay;
+import bridge.impl.CharDisplayImpl;
 import bridge.impl.StringDisplayImpl;
-import bridge.impl.TextFileDisplayImpl;
 
 public class BridgeMain {
     public static void main(String[] args) {
@@ -25,10 +26,16 @@ public class BridgeMain {
 //        System.out.println();
 //        d4.randomDisplay(10);
 
-        Display d5 = new Display(new TextFileDisplayImpl("test.txt"));
-        d5.display();
+//        Display d5 = new Display(new TextFileDisplayImpl("test.txt"));
+//        d5.display();
+//
+//        CountDisplay d6 = new CountDisplay(new TextFileDisplayImpl("test.txt"));
+//        d6.multiDisplay(3);
 
-        CountDisplay d6 = new CountDisplay(new TextFileDisplayImpl("test.txt"));
-        d6.multiDisplay(3);
+        IncreaseDisplay d7 = new IncreaseDisplay(new CharDisplayImpl('<', '*', '>'), 1);
+        d7.increaseDisplay(5);
+
+        IncreaseDisplay d8 = new IncreaseDisplay(new CharDisplayImpl('|', '#', '-'), 2);
+        d8.increaseDisplay(5);
     }
 }
