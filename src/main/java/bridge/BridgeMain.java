@@ -2,6 +2,7 @@ package bridge;
 
 import bridge.function.CountDisplay;
 import bridge.function.Display;
+import bridge.function.RandomCountDisplay;
 import bridge.impl.StringDisplayImpl;
 
 public class BridgeMain {
@@ -10,9 +11,17 @@ public class BridgeMain {
         Display d2 = new Display(new StringDisplayImpl("Hello, World"));
         CountDisplay d3 = new CountDisplay(new StringDisplayImpl("Hello, Universe"));
 
-        d1.display();
-        d2.display();
-        d3.display();
-        d3.multiDisplay(5);
+        RandomCountDisplay d4 = new RandomCountDisplay(new StringDisplayImpl("test random"));
+
+//        d1.display();
+//        d2.display();
+//        d3.display();
+//        d3.multiDisplay(5);
+
+        d4.display();
+        System.out.println();
+        d4.multiDisplay(5);
+        System.out.println();
+        d4.randomDisplay(10);
     }
 }
