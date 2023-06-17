@@ -1,0 +1,3 @@
+hello bridge pattern!
+It's so challenging to solve problems.
+But I'm so excited after solving these hard problems.

@@ -4,6 +4,7 @@ import bridge.function.CountDisplay;
 import bridge.function.Display;
 import bridge.function.RandomCountDisplay;
 import bridge.impl.StringDisplayImpl;
+import bridge.impl.TextFileDisplayImpl;
 
 public class BridgeMain {
     public static void main(String[] args) {
@@ -18,10 +19,16 @@ public class BridgeMain {
 //        d3.display();
 //        d3.multiDisplay(5);
 
-        d4.display();
-        System.out.println();
-        d4.multiDisplay(5);
-        System.out.println();
-        d4.randomDisplay(10);
+//        d4.display();
+//        System.out.println();
+//        d4.multiDisplay(5);
+//        System.out.println();
+//        d4.randomDisplay(10);
+
+        Display d5 = new Display(new TextFileDisplayImpl("test.txt"));
+        d5.display();
+
+        CountDisplay d6 = new CountDisplay(new TextFileDisplayImpl("test.txt"));
+        d6.multiDisplay(3);
     }
 }
