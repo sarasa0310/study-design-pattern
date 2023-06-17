@@ -1,4 +1,6 @@
-package bridge;
+package bridge.function;
+
+import bridge.impl.DisplayImpl;
 
 public class CountDisplay extends Display {
 

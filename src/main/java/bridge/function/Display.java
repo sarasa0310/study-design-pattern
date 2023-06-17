@@ -1,4 +1,6 @@
-package bridge;
+package bridge.function;
+
+import bridge.impl.DisplayImpl;
 
 public class Display {
 

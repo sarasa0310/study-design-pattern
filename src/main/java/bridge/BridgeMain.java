@@ -1,5 +1,9 @@
 package bridge;
 
+import bridge.function.CountDisplay;
+import bridge.function.Display;
+import bridge.impl.StringDisplayImpl;
+
 public class BridgeMain {
     public static void main(String[] args) {
         Display d1 = new Display(new StringDisplayImpl("Hello, Korea"));

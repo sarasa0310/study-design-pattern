@@ -1,4 +1,4 @@
-package bridge;
+package bridge.impl;
 
 public class StringDisplayImpl extends DisplayImpl {
 
